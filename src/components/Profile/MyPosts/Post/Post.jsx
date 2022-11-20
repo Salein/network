@@ -3,14 +3,14 @@ import s from './Post.module.css'
 
 
 
-const Post = () => {
+const Post = (props) => {
 
   return (
     <div className={s.item}>
       <img src="https://avatarfiles.alphacoders.com/922/92251.jpg" alt="" />
-      Posts 1
+      {props.message}
       <div>
-        <span>Like</span>
+        <span>Like{props.count}</span>
       </div>
     </div>
   )
