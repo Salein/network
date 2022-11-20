@@ -6,7 +6,7 @@ const Header = () => {
 
     return(
         <header className={s.header}>
-            <img src="https://img.freepik.com/premium-vector/flat-golden-elegant-ornamental-s-logo-template_168102-140.jpg" alt="" />
+            <img src="https://i.pinimg.com/474x/9c/08/04/9c0804aec4a2c8ec751a630fa1c56bba.jpg" alt="" />
         </header>
     )
 }

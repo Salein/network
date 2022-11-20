@@ -2,6 +2,8 @@
   grid-area: c;
   background-color: cadetblue;
   border-radius: 20px;
-  padding-left: 15px;
 }
 
+.content img {
+  border-radius: 20px;
+}
