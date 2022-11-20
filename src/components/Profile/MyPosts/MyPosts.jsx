@@ -11,11 +11,8 @@ const MyPosts = () => {
       <textarea></textarea>
       <button>Add post</button>
       <div>
-        <Post message="It's first" count="1" />
-        <Post message="Two"  count="2"/>
-        <Post count="3"/>
-        <Post count="4"/>
-        <Post count="5"/>
+        <Post message="It's first" likeCount="1" />
+        <Post message="Two"  likeCount="2"/>
       </div>
     </div>
   )
