@@ -6,13 +6,25 @@ import Post from "./Post/Post"
 
 const MyPosts = () => {
 
+  let postData = [
+    {id: 1, message: 'It\'s first', likesCount: 1},
+    {id: 1, message: 'Two', likesCount: 5}
+  ]
+
   return (
-    <div className={s.posts}>
-      <textarea></textarea>
-      <button>Add post</button>
+    <div className={s.postsBlock}>
+      <h3>My Posts</h3>
       <div>
-        <Post message="It's first" likeCount="1" />
-        <Post message="Two"  likeCount="2"/>
+        <div>
+          <textarea></textarea>
+        </div>
+        <div>
+          <button>Add post</button>
+        </div>
+      </div>
+      <div className={s.posts}>
+        <Post message={postData[0].message} likeCount={postData[0].likesCount} />
+        <Post message={postData[1].message} likeCount={postData[1].likesCount} />
       </div>
     </div>
   )

@@ -12,7 +12,7 @@
 }
 
 .dialog {
-
+    margin: 0;
 }
 
 .messages {
@@ -20,5 +20,5 @@
 }
 
 .message {
-
+    margin: 0;
 }
