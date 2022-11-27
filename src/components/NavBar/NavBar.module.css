@@ -4,11 +4,16 @@
   border-radius: 20px;
   padding-top: 15px
 }
-.item {
-  margin-left: 15px;
+.item a {
+  margin: 20px;
   color: white;
+  text-decoration: none;
 }
 
-.active {
-  color: rgb(12, 239, 61);
+a.active{
+  color: rgb(171, 12, 239);
+}
+
+a:hover {
+  color: aqua;
 }
