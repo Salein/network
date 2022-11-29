@@ -6,7 +6,8 @@ import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 import Profile from "./components/Profile/Profile";
 
-function App() {
+
+function App(props) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -14,8 +15,8 @@ function App() {
         <NavBar />
         <div className="app-wrapper-content">
           <Routes>
-            <Route path="/profile/*" element={<Profile/>} />
-            <Route path="/dialogs/*" element={<Dialogs/>} />
+            <Route path="/profile/*" element={<Profile posts={props.posts} />} />
+            <Route path="/dialogs/*" element={<Dialogs dialogs={props.dialogs} messages={props.messages} />} />
           </Routes>
         </div>
       </div>
