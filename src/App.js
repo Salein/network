@@ -20,8 +20,10 @@ function App(props) {
             dispatch={props.dispatch} />} />
 
             <Route path="/dialogs/*" element={<Dialogs
+            newMessageBody={props.state.messagesPage.newMessageBody}
             dialogs={props.state.messagesPage.dialogs}
-            messages={props.state.messagesPage.messages} />} />
+            messages={props.state.messagesPage.messages}
+            dispatch={props.dispatch} />} />
           </Routes>
         </div>
       </div>
