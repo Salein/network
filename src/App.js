@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Profile from "./components/Profile/Profile";
 
 
-function App(props) {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -15,9 +15,7 @@ function App(props) {
         <NavBar />
         <div className="app-wrapper-content">
           <Routes>
-            <Route path="/profile/*" element={<Profile
-            profilePage={props.state.profilePage}
-            dispatch={props.dispatch} />} />
+            <Route path="/profile/*" element={<Profile store={props.store}/>} />
 
             <Route path="/dialogs/*" element={<Dialogs
             newMessageBody={props.state.messagesPage.newMessageBody}
