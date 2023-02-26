@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Profile from "./components/Profile/Profile";
 
 
-const App = (props) => {
+const App = () => {
   return (
       <div className="app-wrapper">
         <Header />
