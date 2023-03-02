@@ -26,7 +26,7 @@ const MyPosts = (props) => {
           <textarea ref={newPostElement} value={props.newPostText} onChange={onPostChange} />
         </div>
         <div>
-          <button onClick={onAddPost} >Add post</button>
+          <button onClick={onAddPost}>Add post</button>
         </div>
       </div>
       <div className={s.posts}>
