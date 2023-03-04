@@ -3,9 +3,10 @@ const UNFOLLOW = "UNFOLLOW";
 const SET_USERS = "SET_USERS";
 
 let initialState = {
- /* users: [
+  users: [
     {
       id: 1,
+      photoUrl: 'https://parfumclub.org/images/celebrities/salma-hayek.jpg',
       followed: false,
       fullName: "Eugene",
       status: "I am a boss",
@@ -13,6 +14,7 @@ let initialState = {
     },
     {
       id: 2,
+      photoUrl: 'https://parfumclub.org/images/celebrities/salma-hayek.jpg',
       followed: true,
       fullName: "Dmitry",
       status: "I find my first job",
@@ -20,13 +22,13 @@ let initialState = {
     },
     {
       id: 3,
+      photoUrl: 'https://parfumclub.org/images/celebrities/salma-hayek.jpg',
       followed: false,
       fullName: "Nikolay",
       status: "I am a lucky",
       location: { city: "Boston", country: "USA" },
     },
   ],
-  */
 };
 
 export const usersReducer = (state = initialState, action) => {
