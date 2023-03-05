@@ -2,6 +2,36 @@ import React from "react";
 import style from './Users.module.css'
 
 let Users = (props) => {
+
+    if (props.users.length === 0) {
+        props.setUsers([
+            {
+                id: 1,
+                photoUrl: 'https://parfumclub.org/images/celebrities/salma-hayek.jpg',
+                followed: false,
+                fullName: "Eugene",
+                status: "I am a boss",
+                location: { city: "Minsk", country: "Belarus" },
+            },
+            {
+                id: 2,
+                photoUrl: 'https://parfumclub.org/images/celebrities/salma-hayek.jpg',
+                followed: true,
+                fullName: "Dmitry",
+                status: "I find my first job",
+                location: { city: "Moscow", country: "Russia" },
+            },
+            {
+                id: 3,
+                photoUrl: 'https://parfumclub.org/images/celebrities/salma-hayek.jpg',
+                followed: false,
+                fullName: "Nikolay",
+                status: "I am a lucky",
+                location: { city: "Boston", country: "USA" },
+            }]
+        )
+    }
+
     return <div>
         {
             props.users.map(u => <div key={u.id}>
