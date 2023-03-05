@@ -1,5 +1,5 @@
 const ADD_POST = "ADD-POST";
-const UPDATE_NEW_PSOT_TEXT = "UPDATE-NEW-PSOT-TEXT";
+const UPDATE_NEW_POST_TEXT = "UPDATE-NEW-PSOT-TEXT";
 
 let initialState = {
   posts: [
@@ -21,7 +21,7 @@ export const profileReducer = (state = initialState, action) => {
         ],
       };
 
-    case UPDATE_NEW_PSOT_TEXT:
+    case UPDATE_NEW_POST_TEXT:
       return {
         ...state,
         newPostText: action.newText,
@@ -33,6 +33,6 @@ export const profileReducer = (state = initialState, action) => {
 
 export const addPostActionCreator = () => ({ type: ADD_POST });
 export const updateNewPostTextActionCreator = (text) => ({
-  type: UPDATE_NEW_PSOT_TEXT,
+  type: UPDATE_NEW_POST_TEXT,
   newText: text,
 });
