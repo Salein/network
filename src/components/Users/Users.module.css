@@ -11,3 +11,7 @@
     color: burlywood;
     cursor: pointer;
 }
+
+.preloader {
+    background-color: whitesmoke;
+}
