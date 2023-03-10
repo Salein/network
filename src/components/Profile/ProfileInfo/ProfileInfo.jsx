@@ -5,7 +5,7 @@ import Preloader from "../../common/preloader/preloader"
 
 const ProfileInfo = (props) => {
 
-  if (props.profile == null) {
+  if (!props.profile) {
     return <Preloader/> }
 
     return(
@@ -14,7 +14,7 @@ const ProfileInfo = (props) => {
         <img src='https://besthqwallpapers.com/Uploads/26-12-2020/148818/thumb2-3d-black-pillars-background-3d-elements-background-3d-creative-background-3d-art-background.jpg' alt=""/>
         </div>
         <div className={s.descriptionBlock}>
-          <img src={props.profile.photos.large} alt='' />
+          <img src={props.profile.photos.small} alt='' />
           ava
         </div>
       </div>
