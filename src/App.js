@@ -4,7 +4,7 @@ import "./App.css";
 import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
-import ProfileContainer from "./components/Profile/ProfileContainer";
+import ProfileAPIContainer from "./components/Profile/ProfileAPIContainer";
 import UsersContainer from "./components/Users/UsersContainer";
 
 
@@ -15,8 +15,9 @@ const App = () => {
         <NavBar />
         <div className="app-wrapper-content">
           <Routes>
-            <Route path="/profile/*" element={<ProfileContainer />} />
-
+            <Route path="/profile/:userId" element={<ProfileAPIContainer />} />
+            <Route path="/profile/" element={<ProfileAPIContainer />} />
+            
             <Route path="/dialogs/*" element={<DialogsContainer />} />
 
             <Route path="/users/*" element={<UsersContainer />} />
