@@ -4,7 +4,21 @@
     border-radius: 20px;
   }
   
-header img {
+.header img {
   border-radius: 20px;
   width: 60px;
   }
+
+.loginBlock {
+  float: right;
+  margin: 1em 2em;
+  color: white;
+}
+
+.loginBlock a {
+  color: white;
+}
+
+.loginBlock:hover {
+box-shadow: 0 1px 1em 6px chartreuse;
+}
