@@ -2,6 +2,7 @@ import React from "react";
 import style from './Users.module.css'
 import userPhoto from './../../assets/images/user.png'
 import { NavLink } from "react-router-dom";
+import axios from "axios";
 
 
 
@@ -19,7 +20,6 @@ let Users = (props) => {
             {pages.map(p => {
                 return <span className={props.currentPage === p && style.selectedPage}
                     onClick={() => { props.onPageChanged(p) }}>{p}</span>
-
             })}
         </div>
         {
@@ -32,8 +32,34 @@ let Users = (props) => {
                     </div>
                     <div>
                         {u.followed
-                            ? <button onClick={() => { props.unfollow(u.id) }}>Follow</button>
-                            : <button onClick={() => { props.follow(u.id) }}>Unfollow</button>}
+//Here is bug, when user is followed and unfollowed, status is not updated
+                            ? <button onClick={() => {
+                                axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
+                                    withCredentials: true,
+                                    headers: {
+                                        "API-KEY": "7523130a-8e26-46ec-bb34-39239cc89e1a"
+                                    }
+                                })
+                                    .then(response => {
+                                        if (response.data.resultCode === 0) {
+                                            props.follow(u.id)
+                                        }
+                                    })
+                            }}>Follow</button>
+//Here is bug, when user is followed and unfollowed, status is not updated
+                            : <button onClick={() => {
+                                axios.delete(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {
+                                    withCredentials: true,
+                                    headers: {
+                                        "API-KEY": "7523130a-8e26-46ec-bb34-39239cc89e1a"
+                                    }
+                                })
+                                    .then(response => {
+                                        if (response.data.resultCode === 0) {
+                                            props.unfollow(u.id)
+                                        }
+                                    })
+                            }}>Unfollow</button>}
                     </div>
                 </span>
                 <span>
