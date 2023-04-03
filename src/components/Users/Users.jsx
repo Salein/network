@@ -33,6 +33,7 @@ let Users = (props) => {
                     <div>
                         {u.followed
 //Here is bug, when user is followed and unfollowed, status is not updated
+//maybe bug is here because api free and bad working
                             ? <button disabled={props.followingInProgress.some(id => id === u.id)} onClick={() => {
                                 props.followingInProgress(true, u.id)
                                 axios.post(`https://social-network.samuraijs.com/api/1.0/follow/${u.id}`, {}, {
