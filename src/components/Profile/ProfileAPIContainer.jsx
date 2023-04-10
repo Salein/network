@@ -4,6 +4,7 @@ import axios from "axios"
 import { connect } from "react-redux"
 import { setUsersProfile } from "../../redux/profile-reducer"
 import { useParams } from "react-router-dom"
+import { usersAPI } from "../../api/api"
 
 
 const ProfileAPIContainer = (props) => {
@@ -14,6 +15,8 @@ const ProfileAPIContainer = (props) => {
   }
   
   useEffect(() => {
+    usersAPI.getProfile(params.userId)
+  //TODO добавить какой-нибудь костыль
     axios.get(`https://social-network.samuraijs.com/api/1.0/profile/${params.userId}`)
       .then(response => {
         props.setUsersProfile(response.data)
